@@ -17,11 +17,12 @@
 		FA7247CF2C11160100669B96 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7247CE2C11160100669B96 /* Color+Extensions.swift */; };
 		FA7247D22C11241B00669B96 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7247D12C11241B00669B96 /* Constraints.swift */; };
 		FA7247D42C11268900669B96 /* CustomMainPageCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7247D32C11268900669B96 /* CustomMainPageCellCollectionViewCell.swift */; };
-		FA7247D82C11276B00669B96 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7247D72C11276B00669B96 /* UserView.swift */; };
 		FA7247DA2C11278200669B96 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7247D92C11278200669B96 /* UserViewController.swift */; };
 		FA7247DC2C11280F00669B96 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7247DB2C11280F00669B96 /* UserData.swift */; };
 		FA7247E02C126B1300669B96 /* CustomCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7247DF2C126B1300669B96 /* CustomCellData.swift */; };
 		FA7247E22C12708F00669B96 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7247E12C12708F00669B96 /* UIFont+Extensions.swift */; };
+		FAEB726C2C137DA5004E67C0 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB726B2C137DA5004E67C0 /* CustomTableViewCell.swift */; };
+		FAEB726E2C13939D004E67C0 /* HeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB726D2C13939D004E67C0 /* HeatherView.swift */; };
 		FAF9288F2C133CA6009AD03C /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9288E2C133CA6009AD03C /* CustomHeaderView.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,11 +41,12 @@
 		FA7247CE2C11160100669B96 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		FA7247D12C11241B00669B96 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 		FA7247D32C11268900669B96 /* CustomMainPageCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMainPageCellCollectionViewCell.swift; sourceTree = "<group>"; };
-		FA7247D72C11276B00669B96 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		FA7247D92C11278200669B96 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		FA7247DB2C11280F00669B96 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		FA7247DF2C126B1300669B96 /* CustomCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellData.swift; sourceTree = "<group>"; };
 		FA7247E12C12708F00669B96 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		FAEB726B2C137DA5004E67C0 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		FAEB726D2C13939D004E67C0 /* HeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatherView.swift; sourceTree = "<group>"; };
 		FAF9288E2C133CA6009AD03C /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,8 +203,9 @@
 		FA7247DD2C11287500669B96 /* User screen */ = {
 			isa = PBXGroup;
 			children = (
-				FAF9288D2C133C77009AD03C /* View */,
 				FA7247DE2C11288F00669B96 /* Controller */,
+				FAF9288D2C133C77009AD03C /* View */,
+				FAEB726A2C137D5C004E67C0 /* Cell */,
 			);
 			path = "User screen";
 			sourceTree = "<group>";
@@ -215,10 +218,18 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		FAEB726A2C137D5C004E67C0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FAEB726B2C137DA5004E67C0 /* CustomTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		FAF9288D2C133C77009AD03C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FA7247D72C11276B00669B96 /* UserView.swift */,
+				FAEB726D2C13939D004E67C0 /* HeatherView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,9 +320,10 @@
 				FA7247D42C11268900669B96 /* CustomMainPageCellCollectionViewCell.swift in Sources */,
 				FA7247A62C11104200669B96 /* AppDelegate.swift in Sources */,
 				FA7247E02C126B1300669B96 /* CustomCellData.swift in Sources */,
+				FAEB726E2C13939D004E67C0 /* HeatherView.swift in Sources */,
 				FA7247A82C11104200669B96 /* SceneDelegate.swift in Sources */,
 				FA7247DC2C11280F00669B96 /* UserData.swift in Sources */,
-				FA7247D82C11276B00669B96 /* UserView.swift in Sources */,
+				FAEB726C2C137DA5004E67C0 /* CustomTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

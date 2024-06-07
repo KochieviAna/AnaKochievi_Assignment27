@@ -15,9 +15,8 @@ class MainPageViewController: UIViewController, UICollectionViewDelegate {
     }()
     
     private let headerView: CustomHeaderView = {
-        let header = CustomHeaderView()
-        header.translatesAutoresizingMaskIntoConstraints = false
-        return header
+        let view = CustomHeaderView()
+        return view
     }()
     
     override func viewDidLoad() {
@@ -42,11 +41,11 @@ class MainPageViewController: UIViewController, UICollectionViewDelegate {
         headerView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(60)
+            make.height.equalTo(60 * Constraint.yCoeff)
         }
         
         collectionView.snp.makeConstraints { make in
-            make.top.equalTo(headerView.snp.bottom).offset(8)
+            make.top.equalTo(headerView.snp.bottom).offset(8 * Constraint.yCoeff)
             make.leading.trailing.bottom.equalToSuperview()
         }
     }

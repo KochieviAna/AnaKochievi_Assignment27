@@ -8,5 +8,6 @@
 import UIKit
 
 struct UserData {
-
+    let iconImage: UIImage
+    let cellLabel: String
 }
