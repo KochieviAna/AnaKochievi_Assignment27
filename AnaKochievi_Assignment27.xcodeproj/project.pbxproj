@@ -22,6 +22,7 @@
 		FA7247DC2C11280F00669B96 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7247DB2C11280F00669B96 /* UserData.swift */; };
 		FA7247E02C126B1300669B96 /* CustomCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7247DF2C126B1300669B96 /* CustomCellData.swift */; };
 		FA7247E22C12708F00669B96 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7247E12C12708F00669B96 /* UIFont+Extensions.swift */; };
+		FAF9288F2C133CA6009AD03C /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9288E2C133CA6009AD03C /* CustomHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		FA7247DB2C11280F00669B96 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		FA7247DF2C126B1300669B96 /* CustomCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellData.swift; sourceTree = "<group>"; };
 		FA7247E12C12708F00669B96 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		FAF9288E2C133CA6009AD03C /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				FA7247CA2C1112F000669B96 /* Controller */,
+				FAF9288D2C133C77009AD03C /* View */,
 				FA7247CC2C11132F00669B96 /* Cell */,
 			);
 			path = "Home Screen";
@@ -210,6 +213,14 @@
 				FA7247D92C11278200669B96 /* UserViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		FAF9288D2C133C77009AD03C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAF9288E2C133CA6009AD03C /* CustomHeaderView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +304,7 @@
 				FA7247E22C12708F00669B96 /* UIFont+Extensions.swift in Sources */,
 				FA7247DA2C11278200669B96 /* UserViewController.swift in Sources */,
 				FA7247AA2C11104200669B96 /* MainPageViewController.swift in Sources */,
+				FAF9288F2C133CA6009AD03C /* CustomHeaderView.swift in Sources */,
 				FA7247CF2C11160100669B96 /* Color+Extensions.swift in Sources */,
 				FA7247D42C11268900669B96 /* CustomMainPageCellCollectionViewCell.swift in Sources */,
 				FA7247A62C11104200669B96 /* AppDelegate.swift in Sources */,

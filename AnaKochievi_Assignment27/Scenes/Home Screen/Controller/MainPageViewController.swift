@@ -10,22 +10,6 @@ import SnapKit
 
 class MainPageViewController: UIViewController, UICollectionViewDelegate {
     
-    private lazy var headerLabel: UILabel = {
-        let view = UILabel()
-        view.text = "Stone Stellar"
-        view.font = .poppinsRegular(size: 10)
-        view.textColor = UIColor(hex: "030303")
-        view.numberOfLines = 0
-        return view
-    }()
-    
-    private lazy var headerButton: UIButton = {
-        let view = UIButton()
-        view.setImage(UIImage(named: "Avatar"), for: .normal)
-        view.addTarget(self, action: #selector(headerButtonTapped), for: .touchUpInside)
-        return view
-    }()
-    
     private lazy var collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -49,31 +33,14 @@ class MainPageViewController: UIViewController, UICollectionViewDelegate {
     
     private func setUp() {
         view.addSubview(collectionView)
-        view.addSubview(headerLabel)
-        view.addSubview(headerButton)
     }
     
     private func setUpConstraints() {
-        headerButton.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(55.11 * Constraint.yCoeff)
-            make.leading.equalToSuperview().offset(263 * Constraint.xCoeff)
-            make.width.equalTo(24 * Constraint.xCoeff)
-            make.height.equalTo(22.36 * Constraint.yCoeff)
-        }
-        headerLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(65 * Constraint.yCoeff)
-            make.leading.equalTo(headerButton.snp.trailing).offset(2 * Constraint.xCoeff)
-            make.trailing.equalToSuperview().offset(27 * Constraint.xCoeff)
-        }
+        
         collectionView.snp.makeConstraints { make in
-            make.top.equalTo(headerButton.snp.bottom).offset(40.53 * Constraint.yCoeff)
-            make.leading.trailing.bottom.equalToSuperview()
+            make.top.equalToSuperview().offset(116 * Constraint.yCoeff)
+            make.leading.trailing.bottom.edges.equalToSuperview()
         }
-    }
-    
-    @objc private func headerButtonTapped() {
-        let vc = UserViewController()
-        navigationController?.pushViewController(vc, animated: true)
     }
     
     private func loadCells() {
@@ -113,8 +80,9 @@ class MainPageViewController: UIViewController, UICollectionViewDelegate {
         ]
         collectionView.reloadData()
     }
-    
+
 }
+
 
 extension MainPageViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

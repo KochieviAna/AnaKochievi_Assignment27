@@ -103,26 +103,26 @@ class CustomMainPageCellCollectionViewCell: UICollectionViewCell {
         additionalImageOne.snp.remakeConstraints { make in
             make.top.equalToSuperview().offset(10.71 * Constraint.yCoeff)
             make.trailing.equalToSuperview().offset(-53 * Constraint.xCoeff)
-            make.height.equalTo(4.66 * Constraint.yCoeff)
+            make.height.equalTo(5 * Constraint.yCoeff)
             make.width.equalTo(28 * Constraint.xCoeff)
         }
         additionalImageTwo.snp.remakeConstraints { make in
-            make.top.equalToSuperview().offset(32.23 * Constraint.yCoeff)
-            make.trailing.equalToSuperview().offset(-77.69 * Constraint.xCoeff)
-            make.height.equalTo(6.28 * Constraint.yCoeff)
-            make.width.equalTo(5.87 * Constraint.xCoeff)
+            make.top.equalToSuperview().offset(32 * Constraint.yCoeff)
+            make.trailing.equalToSuperview().offset(-77 * Constraint.xCoeff)
+            make.height.equalTo(6 * Constraint.yCoeff)
+            make.width.equalTo(6 * Constraint.xCoeff)
         }
         additionalImageThree.snp.remakeConstraints { make in
-            make.top.equalToSuperview().offset(35.75 * Constraint.yCoeff)
-            make.trailing.equalToSuperview().offset(-95.59 * Constraint.xCoeff)
-            make.height.equalTo(7.82 * Constraint.yCoeff)
-            make.width.equalTo(8.41 * Constraint.xCoeff)
+            make.top.equalToSuperview().offset(36 * Constraint.yCoeff)
+            make.trailing.equalToSuperview().offset(-95 * Constraint.xCoeff)
+            make.height.equalTo(8 * Constraint.yCoeff)
+            make.width.equalTo(8 * Constraint.xCoeff)
         }
         additionalImageFour.snp.remakeConstraints { make in
-            make.top.equalToSuperview().offset(14.12 * Constraint.yCoeff)
-            make.trailing.equalToSuperview().offset(-21.68 * Constraint.xCoeff)
-            make.height.equalTo(19.03 * Constraint.yCoeff)
-            make.width.equalTo(17.75 * Constraint.xCoeff)
+            make.top.equalToSuperview().offset(14 * Constraint.yCoeff)
+            make.trailing.equalToSuperview().offset(-22 * Constraint.xCoeff)
+            make.height.equalTo(19 * Constraint.yCoeff)
+            make.width.equalTo(18 * Constraint.xCoeff)
         }
         mainImage.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(43 * Constraint.yCoeff)
