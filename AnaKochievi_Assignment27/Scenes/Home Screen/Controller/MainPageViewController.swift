@@ -1,16 +1,9 @@
-//
-//  ViewController.swift
-//  AnaKochievi_Assignment27
-//
-//  Created by MacBook on 06.06.24.
-//
-
 import UIKit
 import SnapKit
 
 class MainPageViewController: UIViewController, UICollectionViewDelegate {
     
-    private lazy var collectionView : UICollectionView = {
+    private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -21,25 +14,40 @@ class MainPageViewController: UIViewController, UICollectionViewDelegate {
         return view
     }()
     
+    private let headerView: CustomHeaderView = {
+        let header = CustomHeaderView()
+        header.translatesAutoresizingMaskIntoConstraints = false
+        return header
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setUp()
         setUpConstraints()
         loadCells()
+        
+        headerView.clearButton.addTarget(self, action: #selector(pushUserViewController), for: .touchUpInside)
     }
+    
     private var customCell: [CustomCellData] = []
     
-    
     private func setUp() {
+        view.addSubview(headerView)
         view.addSubview(collectionView)
     }
     
     private func setUpConstraints() {
         
+        headerView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(60)
+        }
+        
         collectionView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(116 * Constraint.yCoeff)
-            make.leading.trailing.bottom.edges.equalToSuperview()
+            make.top.equalTo(headerView.snp.bottom).offset(8)
+            make.leading.trailing.bottom.equalToSuperview()
         }
     }
     
@@ -80,9 +88,12 @@ class MainPageViewController: UIViewController, UICollectionViewDelegate {
         ]
         collectionView.reloadData()
     }
-
+    
+    @objc func pushUserViewController() {
+        let userVC = UserViewController()
+        navigationController?.pushViewController(userVC, animated: true)
+    }
 }
-
 
 extension MainPageViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

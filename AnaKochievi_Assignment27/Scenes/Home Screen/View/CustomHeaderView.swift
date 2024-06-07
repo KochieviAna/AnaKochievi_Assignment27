@@ -1,40 +1,33 @@
-//
-//  CustomHeaderView.swift
-//  AnaKochievi_Assignment27
-//
-//  Created by MacBook on 07.06.24.
-//
-
 import UIKit
 import SnapKit
 
 class CustomHeaderView: UIView {
     
     let imageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "Avatar") 
-        return imageView
+        let view = UIImageView()
+        view.contentMode = .scaleAspectFit
+        view.image = UIImage(named: "Avatar")
+        return view
     }()
     
     let clearButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Stone Stellar", for: .normal)
-        button.setTitleColor(.systemBlue, for: .normal)
-        button.backgroundColor = .clear
-        return button
+        let view = UIButton(type: .system)
+        view.setTitle("Stone Stellar", for: .normal)
+        view.setTitleColor(UIColor(hex: "030303"), for: .normal)
+        view.backgroundColor = .clear
+        view.titleLabel?.numberOfLines = 0
+        view.titleLabel?.font = .poppinsRegular(size: 10)
+        return view
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
-        setupViewConstraints()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupView()
-        setupViewConstraints()
     }
     
     private func setupView() {
@@ -42,28 +35,17 @@ class CustomHeaderView: UIView {
         addSubview(clearButton)
         
         imageView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(16)
-            make.centerY.equalToSuperview()
-            make.width.height.equalTo(40)
+            make.top.equalToSuperview().offset(13 * Constraint.yCoeff)
+            make.leading.equalToSuperview().offset(263 * Constraint.xCoeff)
+            make.trailing.equalTo(clearButton.snp.leading).offset(-1 * Constraint.xCoeff)
+            make.width.equalTo(24 * Constraint.xCoeff)
+            make.height.equalTo(22 * Constraint.yCoeff)
         }
         
         clearButton.snp.makeConstraints { make in
-            make.leading.equalTo(imageView.snp.trailing).offset(16)
-            make.centerY.equalToSuperview()
-            make.trailing.equalToSuperview().offset(-16)
-        }
-    }
-    private func setupViewConstraints() {
-        imageView.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(16)
-            make.centerY.equalToSuperview()
-            make.width.height.equalTo(40)
-        }
-        
-        clearButton.snp.makeConstraints { make in
-            make.leading.equalTo(imageView.snp.trailing).offset(16)
-            make.centerY.equalToSuperview()
-            make.trailing.equalToSuperview().offset(-16)
+            make.top.equalToSuperview().offset(20 * Constraint.yCoeff)
+            make.leading.equalTo(imageView.snp.trailing).offset(1 * Constraint.xCoeff)
+            make.trailing.equalToSuperview().offset(-27 * Constraint.xCoeff)
         }
     }
 }
