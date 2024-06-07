@@ -132,8 +132,8 @@
 		FA7247C72C1111EF00669B96 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				FA7247DD2C11287500669B96 /* User screen */,
 				FA7247C82C11126900669B96 /* Home Screen */,
+				FA7247DD2C11287500669B96 /* User screen */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";

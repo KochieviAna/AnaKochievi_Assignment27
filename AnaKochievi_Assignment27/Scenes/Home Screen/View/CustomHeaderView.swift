@@ -28,17 +28,32 @@ class CustomHeaderView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
+        setupViewConstraints()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupView()
+        setupViewConstraints()
     }
     
     private func setupView() {
         addSubview(imageView)
         addSubview(clearButton)
         
+        imageView.snp.makeConstraints { make in
+            make.leading.equalToSuperview().offset(16)
+            make.centerY.equalToSuperview()
+            make.width.height.equalTo(40)
+        }
+        
+        clearButton.snp.makeConstraints { make in
+            make.leading.equalTo(imageView.snp.trailing).offset(16)
+            make.centerY.equalToSuperview()
+            make.trailing.equalToSuperview().offset(-16)
+        }
+    }
+    private func setupViewConstraints() {
         imageView.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(16)
             make.centerY.equalToSuperview()
