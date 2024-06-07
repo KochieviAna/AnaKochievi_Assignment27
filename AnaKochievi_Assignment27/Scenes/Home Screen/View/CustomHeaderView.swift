@@ -13,7 +13,7 @@ class CustomHeaderView: UIView {
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "Avatar") // Replace with your image name
+        imageView.image = UIImage(named: "Avatar") 
         return imageView
     }()
     
